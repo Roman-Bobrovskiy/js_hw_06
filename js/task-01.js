@@ -8,5 +8,6 @@ import users from "./users.js";
 // console.log(getUserNames);
 // [ 'Moore Hensley', 'Sharlene Bush', 'Ross Vazquez', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony' ]
 
-const getUserNames = users.map(({ name }) => name);
+// const getUserNames = users.map(({ name }) => name);
+const getUserNames = users.reduce((acc, user) => [...acc, user.name], []);
 console.log(getUserNames);

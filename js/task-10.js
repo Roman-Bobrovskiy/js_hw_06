@@ -4,8 +4,12 @@ import users from "./users.js";
 
 const getSortedUniqueSkills = (users) =>
   users
-    .map(({ skills }) => skills)
-    .reduce((nesArrSkills, elem) => [...nesArrSkills, ...elem], [])
+    // .map(({ skills }) => skills)
+    // .reduce((nesArrSkills, elem) => [...nesArrSkills, ...elem], [])
+    // .sort()
+    // .filter((elem, index, arr) => arr.indexOf(elem) == index);
+
+    .reduce((nesArrSkills, elem) => [...nesArrSkills, ...elem.skills], [])
     .sort()
     .filter((elem, index, arr) => arr.indexOf(elem) == index);
 
